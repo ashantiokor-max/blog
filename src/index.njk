@@ -1,0 +1,33 @@
+---
+layout: layout.njk
+title: Home
+---
+
+<section class="hero">
+  <p class="eyebrow">Law · Justice · Culture · Reflection</p>
+  <h1>A thoughtful pink corner of the internet.</h1>
+  <p class="hero-text">
+    Essays and reflections on law, justice, healthcare, culture, books,
+    identity, and the work of becoming.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="/blog/" class="button primary">Read the Blog</a>
+    <a href="/about/" class="button secondary">About Me</a>
+  </div>
+</section>
+
+<section class="featured">
+  <h2>Latest Writing</h2>
+
+  <div class="post-grid">
+    {% for post in collections.posts | slice(0, 3) %}
+      <article class="post-card">
+        <p class="category">{{ post.data.category }}</p>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.excerpt }}</p>
+        <a href="{{ post.url }}">Read more</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
