@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{{ title }} | Ashanti Oghene</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="logo">Ashanti Oghene</a>
+
+      <div class="nav-links">
+        <a href="/about/">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/portfolio/">Portfolio</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Ashanti Oghene. All rights reserved.</p>
+  </footer>
+</body>
+</html>
