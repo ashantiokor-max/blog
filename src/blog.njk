@@ -1,0 +1,29 @@
+---
+layout: layout.njk
+title: Blog
+permalink: /blog/
+---
+
+<section class="hero">
+  <p class="eyebrow">Blog</p>
+  <h1>Essays, notes, and reflections.</h1>
+  <p class="hero-text">
+    Writing on law, justice, health, culture, books, identity, and the making
+    of a thoughtful life.
+  </p>
+</section>
+
+<section class="featured">
+  <h2>All Posts</h2>
+
+  <div class="post-grid">
+    {% for post in collections.posts %}
+      <article class="post-card">
+        <p class="category">{{ post.data.category }}</p>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.excerpt }}</p>
+        <a href="{{ post.url }}">Read more</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
